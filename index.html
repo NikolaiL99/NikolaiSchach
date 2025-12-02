@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12x12 Chesslike</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell" id="app-root">
+      <section class="board-panel" id="board-panel">
+        <header class="status-bar">
+          <div id="turn-indicator">White to move</div>
+          <div class="button-row">
+            <button id="reset-btn" type="button">Reset Game</button>
+            <button id="swap-btn" type="button">Flip Board</button>
+            <button id="fullscreen-btn" type="button">Fullscreen</button>
+          </div>
+        </header>
+        <div id="board" class="board"></div>
+        <footer class="legend">
+          Click a piece to see its legal moves. Click again to move or deselect.
+        </footer>
+      </section>
+      <section class="side-panel">
+        <h2>Move Log</h2>
+        <ol id="move-log" class="move-log"></ol>
+        <div class="notes">
+          <h3>Variant Rules</h3>
+          <ul>
+            <li>Board is 12x12.</li>
+            <li>Each side gets four extra knights; pawns cover all twelve files.</li>
+            <li>No castling, en passant, or draw rules (yet).</li>
+            <li>Pawns promote to queens on the far rank.</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="src/game.js" type="module"></script>
+  </body>
+</html>
+
